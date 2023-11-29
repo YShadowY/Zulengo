@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Vendas</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <h1>Registro de Vendas</h1>
+
+    <form id="vendaForm" action="/registrar_venda" method="POST">
+        <label for="data_venda">Data da Venda:</label>
+        <input type="date" id="data_venda" name="data_venda" required><br><br>
+
+        <label for="nome_cliente">Nome do Cliente:</label>
+        <input type="text" id="nome_cliente" name="nome_cliente"><br><br>
+
+        <label for="produto">Produto Vendido:</label>
+        <select id="produto" name="produto">
+            <option value="camisa">Camisa</option>
+            <option value="calca">Calça</option>
+            <option value="sapato">Sapato</option>
+        </select><br><br>
+
+        <label for="quantidade">Quantidade:</label>
+        <input type="number" id="quantidade" name="quantidade" min="1" required><br><br>
+
+        <input type="submit" value="Registrar Venda">
+    </form>
+    <button><a href='/usuario'>Voltar</a></button>
+    
+
+    <div id="resultado"></div>
+
+    <script>
+        document.getElementById('vendaForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Previne o envio padrão do formulário
+
+            // Captura os valores dos campos
+            const dataVenda = document.getElementById('data_venda').value;
+            const nomeCliente = document.getElementById('nome_cliente').value;
+            const produto = document.getElementById('produto').value;
+            const quantidade = document.getElementById('quantidade').value;
+
+            // Cria uma string com os dados para exibir na página
+            const resultadoHTML = `
+                <p><strong>Data da Venda:</strong> ${dataVenda}</p>
+                <p><strong>Nome do Cliente:</strong> ${nomeCliente}</p>
+                <p><strong>Produto Vendido:</strong> ${produto}</p>
+                <p><strong>Quantidade:</strong> ${quantidade}</p>
+            `;
+
+            // Exibe os dados na div de resultado
+            document.getElementById('resultado').innerHTML = resultadoHTML;
+        });
+    </script>
+</body>
+</html>
