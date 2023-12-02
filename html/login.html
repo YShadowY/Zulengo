@@ -3,17 +3,31 @@
 <html>
 <head>
     <title>Login</title>
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="../css/login.css">
 </head>
 <body>
-    <h1>Login</h1>
-    <form action="/login" method="POST">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" style="color: crimson;"><br><br>
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password"><br><br>
-        <input type="submit" id="login" name="login">
-        <a href="/"><button>Voltar</a></button>
-    </form>
+    <section>
+            <form action="/login" method="POST">
+                    <h1>Login</h1>
+                
+                <div class="inputbox">
+                    <ion-icon name="Username"></ion-icon>
+                    <input type="text" id="username" name="username" required>
+                    <label for="">Username</label>
+                </div>
+                <div class="inputbox">
+                    <ion-icon name="lock-closed-outline"></ion-icon>
+                    <input type="password" id="password" name="password" required>
+                    <label for="">Password</label>
+                </div>
+                <div class="register">
+                    <p>Ainda não tem um registro?   <a href="/registrousuario">Registrar</a></p>
+                </div>
+                <div class="forget"> 
+                    <button><a type="submit" id="login" name="login">Login</a></button>
+                    <button><a href="/">Voltar</a></button> 
+                </div>  
+            </form>
+    </section>
 </body>
 </html>
