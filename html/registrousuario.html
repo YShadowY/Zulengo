@@ -4,8 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../css/registrousuario.css">
 </head>
 <body>
-    <p>Nada de registro ainda amigo!</p>
+    <section>
+        <form id="registro_form" action="/registro" method="post">
+                <h1>Registre-se</h1>
+            <div class="inputbox">
+                <input type="text" id="Username" name="Username"required>
+                <label for="">Username</label>
+            </div>
+            <div class="inputbox">
+                <input type="password" id="password" name="password"required>
+                <label for="">Password</label>
+            </div>
+            <div class="inputbox">
+                <input type="text" id="email" name="email"required>
+                <label for="">Email</label>
+            </div>
+            <div class="forget">
+                <button><a type="submit" id="registro">Registrar</a></button>
+            </div>
+            <div class="forget">
+                <button><a href="/login">Voltar</a></button>
+                
+            </div>
+        </form>
+    </section>
+    
 </body>
 </html>
