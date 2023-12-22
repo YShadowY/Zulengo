@@ -4,30 +4,45 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Poppins' sans-serif;
 }
-
 
 .header {
     display: flex;
-    height: 150px;
-    background-image: url(https://th.bing.com/th/id/OIP.9Jp0eYgAE75ALgNf4IWu0gHaEo?rs=1&pid=ImgDetMain);
-    margin: 0;
-    border-radius: 20px 20px 20px 20px;
+    min-height: 100vh;
+    background-image: url(https://wallpaperaccess.com/full/3279558.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 20px;
 }
 
-.button-section {
-    position: absolute;
-    top: 65px;
-    right: 10px;
-    text-align: center;
-    justify-content: center;
-    background-color: transparent;
-    backdrop-filter: blur(10px);
+.container {
+    margin-top: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+button {
+    background-color: white;
     border-radius: 10px 10px 10px 10px;
     width: 100px;
     height: 30px;
     border: none;
-    font-family: 'Poppins' sans-serif;
-}                                   
+    transition: all 0.9s ease; 
+}
 
+a{
+    font-family: 'Poppins', sans-serif;
+    color: black;
+}
+
+a:hover{
+    color: rgb(206, 154, 23);
+}
+
+button:hover{
+    background-color: gray;
+    color: inherit;
+}

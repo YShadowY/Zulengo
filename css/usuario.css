@@ -6,3 +6,22 @@
     box-sizing: border-box;
     font-family: "poppins", sans-serif ;
 }
+body{
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url(https://i.pinimg.com/originals/8b/bf/dd/8bbfddfb8c592088fb33611adbeb2a1e.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+button{
+    border-radius: 0;
+    background-color: transparent;
+}
+
+a{
+    background-color: transparent;
+    
+}
